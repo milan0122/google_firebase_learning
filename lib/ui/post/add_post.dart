@@ -19,7 +19,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Data'),
+        title: Text('Insert Operation'),
       ),
       body: Column(
         children: [
@@ -47,11 +47,13 @@ class _AddPostScreenState extends State<AddPostScreen> {
             setState(() {
               loading=true;
             });
-           dfRef.child(DateTime.now().millisecondsSinceEpoch.toString()).set({
+            String id = DateTime.now().millisecondsSinceEpoch.toString();
+           dfRef.child(id).set({
              // if you want to add nested child
              //dfRef.child(DateTime.now().millisecondsSinceEpoch.toString()).child('comment').set({
+             'id': id,
               'title':postController.text.toString(),
-              'id': DateTime.now().millisecondsSinceEpoch.toString()
+
 
 
             }).then((value){
@@ -71,4 +73,5 @@ class _AddPostScreenState extends State<AddPostScreen> {
     );
 
   }
+
 }
