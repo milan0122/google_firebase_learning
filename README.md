@@ -13,6 +13,7 @@ This project is a Flutter application demonstrating various features of Firebase
 - **Animated List**: Smoothly display data with `Firebase Animated List`.
 - **Filter Items**: Implement filtering for improved data accessibility.
 - **Update & Delete**: Users can update or delete items in the database.
+- Same operation has also performed with FirebaseFireStore
 
 ## Getting Started
 

@@ -29,7 +29,7 @@ class _PostScreenState extends State<PostScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Fetching data using FirebaseAnimateList'),
+        title: const Text('FirebaseAnimateList'),
         actions: [
           IconButton(
               onPressed: () {
@@ -93,6 +93,7 @@ class _PostScreenState extends State<PostScreen> {
                                       onTap: (){
                                         ref.child(snapshot.child('id').value.toString()).remove();
                                         Navigator.pop(context);
+
                                       },
                                       leading: Icon(Icons.delete),
                                       title: Text('Delete'),
