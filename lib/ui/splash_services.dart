@@ -14,7 +14,7 @@ class SplashServices{
 
     if(user !=null){
       Future.delayed(const Duration(seconds: 2),(){
-        Navigator.push(context, MaterialPageRoute(builder: (_)=>UploadImageScreen()));
+        Navigator.push(context, MaterialPageRoute(builder: (_)=>FireStoreListScreen()));
       });
 
     }

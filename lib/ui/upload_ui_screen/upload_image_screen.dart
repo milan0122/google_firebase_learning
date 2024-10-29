@@ -13,24 +13,18 @@ class UploadImageScreen extends StatefulWidget {
 }
 
 class _UploadImageScreenState extends State<UploadImageScreen> {
-
   File? _image;
   final picker = ImagePicker();
   bool loading = false;
   //reference for storage
   firebase_storage.FirebaseStorage storage = firebase_storage.FirebaseStorage.instance;
   DatabaseReference dfRef = FirebaseDatabase.instance.ref('Post');
-
-
-
-
   Future getImageGallery()async{
     final pickedFile = await picker.pickImage(source: ImageSource.gallery,imageQuality: 80);
     if(pickedFile!=null){
       setState(() {
         _image = File(pickedFile.path);
       });
-
     }
     else{
       Utils.toastMessage('No image picked');

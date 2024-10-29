@@ -15,7 +15,7 @@ This project is a Flutter application demonstrating various features of Firebase
 - **Update & Delete**: Users can update or delete items in the database.
 - Same operation has also performed with FirebaseFireStore
 - **Upload Image**: able to upload in firebase storage from external device (simulator or real device)
-
+-**Forgot Password**: implement this features to enhance users security
 ## Getting Started
 
 ### Prerequisites

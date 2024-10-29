@@ -8,7 +8,6 @@ class Utils{
        msg: message,
      toastLength: Toast.LENGTH_SHORT,
      gravity: ToastGravity.BOTTOM,
-     textColor: Colors.red,
      timeInSecForIosWeb: 1,
      fontSize: 16
 
