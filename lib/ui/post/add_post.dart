@@ -1,5 +1,5 @@
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/widgets/round_button.dart';
 import 'package:flutter/material.dart';
 
@@ -60,12 +60,12 @@ class _AddPostScreenState extends State<AddPostScreen> {
               setState(() {
                 loading=false;
               });
-              Utilis.toastMessage('Post added');
+              Utils.toastMessage('Post added');
             }).onError((error,stackTrace){
               setState(() {
                 loading=false;
               });
-              Utilis.toastMessage(error.toString());
+              Utils.toastMessage(error.toString());
             });
           })
         ],

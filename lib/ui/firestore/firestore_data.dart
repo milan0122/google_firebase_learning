@@ -1,5 +1,5 @@
 import 'package:firebase_database/firebase_database.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/widgets/round_button.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -82,12 +82,12 @@ class _FireStoreDataState extends State<FireStoreData> {
                   setState(() {
                     loading=false;
                   });
-                  Utilis.toastMessage("sucessfully added");
+                  Utils.toastMessage("sucessfully added");
                 }).onError((error,StackTrace){
                   setState(() {
                     loading=false;
                   });
-                  Utilis.toastMessage(error.toString());
+                  Utils.toastMessage(error.toString());
                 });
 
               })

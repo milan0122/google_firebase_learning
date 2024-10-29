@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/ui/login_screen.dart';
 import 'package:firebase_project/ui/post/add_post.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +37,7 @@ class _PostScreenState extends State<PostScreen> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => LoginScreen()));
                 }).onError((error, StackTrace) {
-                  Utilis.toastMessage(error.toString());
+                  Utils.toastMessage(error.toString());
                 });
               },
               icon: const Icon(Icons.login_rounded))
@@ -152,9 +152,9 @@ class _PostScreenState extends State<PostScreen> {
                     ref.child(id).update({
                       'title':editController.text.toLowerCase()
                     }).then((value){
-                      Utilis.toastMessage('Post updated');
+                      Utils.toastMessage('Post updated');
                     }).onError((error,StackTrace){
-                      Utilis.toastMessage(error.toString());
+                      Utils.toastMessage(error.toString());
                     });
                   },
                   child: Text('Update'))

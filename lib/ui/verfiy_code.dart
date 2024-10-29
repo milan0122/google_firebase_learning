@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/ui/post/post_screen.dart';
 import 'package:firebase_project/widgets/round_button.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +54,7 @@ class _VerifyCodeScreenState extends State<VerifyCodeScreen> {
                 setState(() {
                   loading = false;
                 });
-                Utilis.toastMessage(e.toString());
+                Utils.toastMessage(e.toString());
                 //debugPrint(e.toString());
               }
             })

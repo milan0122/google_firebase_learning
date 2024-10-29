@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_database/ui/firebase_animated_list.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/ui/firestore/firestore_data.dart';
 import 'package:firebase_project/ui/login_screen.dart';
 import 'package:firebase_project/ui/post/add_post.dart';
@@ -41,7 +41,7 @@ class _FireStoreListScreenState extends State<FireStoreListScreen> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (_) => LoginScreen()));
                 }).onError((error, StackTrace) {
-                  Utilis.toastMessage(error.toString());
+                  Utils.toastMessage(error.toString());
                 });
               },
               icon: const Icon(Icons.login_rounded))
@@ -172,9 +172,9 @@ class _FireStoreListScreenState extends State<FireStoreListScreen> {
                     ref.doc(id).update({
                       'thoughts':editController.text.toString()
                     }).then((value){
-                      Utilis.toastMessage("Update successfully");
+                      Utils.toastMessage("Update successfully");
                     }).onError((error, StackTrace){
-                      Utilis.toastMessage(error.toString());
+                      Utils.toastMessage(error.toString());
                     });
           },
                   child: Text('Update '))

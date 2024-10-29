@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/ui/verfiy_code.dart';
 import 'package:firebase_project/widgets/round_button.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +53,7 @@ class _LoginPhoneState extends State<LoginPhone> {
                   setState(() {
                     loading = false;
                   });
-                  Utilis.toastMessage(e.toString());
+                  Utils.toastMessage(e.toString());
                   },
                   codeSent: (String verificationId, int? token){
                   Navigator.push(context, MaterialPageRoute(builder: (_)=>VerifyCodeScreen(verificationId: verificationId,)));
@@ -65,7 +65,7 @@ class _LoginPhoneState extends State<LoginPhone> {
                     setState(() {
                       loading = false;
                     });
-                  Utilis.toastMessage(e.toString());
+                  Utils.toastMessage(e.toString());
                   }
               );
             })

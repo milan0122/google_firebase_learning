@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/ui/login_phone.dart';
 import 'package:firebase_project/ui/post/post_screen.dart';
 import 'package:firebase_project/ui/signup_screen.dart';
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         loading =false;
       });
       debugPrint(error.toString());
-      Utilis.toastMessage(error.toString());
+      Utils.toastMessage(error.toString());
     });
   }
   @override

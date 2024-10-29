@@ -1,6 +1,6 @@
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter/material.dart';
-class Utilis{
+class Utils{
 
 
   static toastMessage(String message){

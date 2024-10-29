@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_project/ui/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_project/Utilis/utilis.dart';
+import 'package:firebase_project/Utils/utils.dart';
 import 'package:firebase_project/widgets/round_button.dart';
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -39,7 +39,7 @@ class _SignupScreenState extends State<SignupScreen> {
         });
 
       }).onError((error,stackTrace){
-        Utilis.toastMessage(error.toString());
+        Utils.toastMessage(error.toString());
         setState(() {
           loading = false;
         });
